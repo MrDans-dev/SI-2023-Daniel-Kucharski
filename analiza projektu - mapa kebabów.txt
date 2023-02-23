@@ -1,0 +1,17 @@
+Analiza projektu “Mapa Kebabów”
+
+Budżet (czas potrzebny na wykonanie aplikacji)
+
+-160 godzin na pisanie aplikacji (ok. miesiąc pracy)
+- 80 godzin na testowanie aplikacji (ok. 2 tygodnie pracy)
+
+Cel projektu
+
+- stworzenie aplikacji umożliwiającej odnajdywanie budek z kebabem w mieście lub okolicy (mapa z zaznaczonymi punktami oraz trasą dotarcia do celu)
+- możliwość dodania oceny oraz opinii na temat danej budki z kebabem
+- umożliwienie zamawiania online 
+- przeglądanie ofert budek z kebabem 
+
+Odpowiedzialność 
+- programiści (backend + frontend)
+- tester aplikacji
