@@ -1,16 +1,13 @@
 import gradio as gr
 import openai
 
-# Ustawienia API OpenAI
-openai.api_key = "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" # zastąp wartość API_KEY swoim kluczem API OpenAI
+openai.api_key = ""
 
-# Ustawienia interfejsu Gradio
 title = "OpenAI Chatbot"
 description = "Witaj! Jestem chatbotem opartym na modelu GPT-3."
 inputs = [gr.components.Textbox(label="Wpisz pytanie")]
 outputs = [gr.components.Textbox(label="Odpowiedź")]
 
-# Funkcja wykonująca żądanie do OpenAI API
 def generate_response(prompt):
     response = openai.Completion.create(
         model="text-davinci-003",
@@ -25,7 +22,6 @@ def generate_response(prompt):
     print(response)
     return response.choices[0].text.strip()
 
-# Uruchomienie interfejsu Gradio
 gr.Interface(
     fn=generate_response,
     inputs=inputs,
