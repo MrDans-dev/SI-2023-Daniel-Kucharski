@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from functools import reduce
 
+
 def get_discernibility_matrix(data):
     n = data.shape[0]
     discernibility_matrix = np.zeros((n, n), dtype=int)
@@ -10,6 +11,7 @@ def get_discernibility_matrix(data):
             if i != j:
                 discernibility_matrix[i, j] = sum(data.iloc[i, :-1] != data.iloc[j, :-1])
     return discernibility_matrix
+
 
 def get_all_reducts(decision_system):
     discernibility_matrix = get_discernibility_matrix(decision_system)
@@ -26,6 +28,7 @@ def get_all_reducts(decision_system):
     search_reduct(set(), attributes)
     return [set(reduct) for reduct in reducts]
 
+
 def get_all_rules(decision_system, reducts):
     all_rules = []
     for reduct in reducts:
@@ -38,8 +41,7 @@ def get_all_rules(decision_system, reducts):
         all_rules.append(rules)
     return all_rules
 
-# Zadanie 1
-print("\nZadanie 1")
+
 decision_system1 = pd.DataFrame({
     'a': [0, 1, 2, 0],
     'b': [2, 2, 0, 2],
